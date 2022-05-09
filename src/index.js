@@ -5,9 +5,21 @@ const wrapper = document.createElement('div')
 console.log(body);
 wrapper.classList.add('wrapper')
 body.append(wrapper)
+const title = document.createElement('div')
+const titleContainer = document.createElement('div')
+title.classList.add('title')
+titleContainer.classList.add('title-container')
 const heading = document.createElement('h1')
+const headingMini = document.createElement('h3')
+const headingMicro = document.createElement('h3')
+headingMini.textContent = 'Keyboard was created in Windows'
+headingMicro.textContent = 'To change language press: Shift + Alt'
 heading.textContent = 'My virtual keyboard'
-wrapper.append(heading)
+title.append(titleContainer)
+title.append(heading)
+titleContainer.append(headingMini)
+titleContainer.append(headingMicro)
+wrapper.append(title)
 const textarea = document.createElement('textarea')
 textarea.classList.add('textarea')
 wrapper.append(textarea)
