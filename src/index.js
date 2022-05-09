@@ -379,12 +379,10 @@ class Key {
     showKeys(lang = 'en') {
         result.forEach(el => {
             const key = document.createElement('div')
-            key.addEventListener('mousedown', (e) => {
-                this.addAffect(e, 'mousedown', key)
-            })
-            key.addEventListener('mouseup', (e) => {
-                this.addAffect(e, 'mouseup', key)
-            })
+            key.addEventListener('mousedown', (e) => this.addAffect(e, 'mousedown', key)
+            )
+            key.addEventListener('mouseup', (e) => this.addAffect(e, 'mouseup', key)
+            )
             key.classList.add('key')
             if (el.code == 38) {
                 key.innerHTML = '&#8593;'
